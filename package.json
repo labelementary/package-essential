@@ -1,0 +1,34 @@
+{
+  "name": "package-essential",
+  "private": "false",
+  "version": "0.0.0",
+  "description": "Package Essential - An Essential Starter Template for Development of TypeScript Based Packages.",
+  "main": "./src/index.ts",
+  "module": "./src/index.ts",
+  "files": ["dist", "README.md", "package.json"],
+  "bin": {
+    "package-essential": "./dist/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "pnpm rimraf dist && tsup",
+    "dev": "pnpm run build && node dist/index.js",
+    "lint": "biome lint --write .",
+    "format": "biome format --write .",
+    "type-check": "tsc --noEmit",
+    "prepare": "husky",
+    "pub:latest": "changeset publish",
+    "build:prepare": "pnpm run type-check && pnpm run lint && pnpm run format && pnpm run build",
+    "dev:prepare": "git pull origin main && pnpm i"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.8.3",
+    "@changesets/changelog-github": "^0.5.0",
+    "@changesets/cli": "^2.27.7",
+    "@types/node": "^22.0.0",
+    "husky": "^9.1.4",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.2.3",
+    "typescript": "^5.5.4"
+  }
+}
