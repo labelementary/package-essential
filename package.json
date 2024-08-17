@@ -11,15 +11,15 @@
   },
   "type": "module",
   "scripts": {
-    "build": "pnpm rimraf dist && tsup",
-    "dev": "pnpm run build && node dist/index.js",
+    "build": "bun rimraf dist && tsup",
+    "dev": "bun run src/index.ts",
     "lint": "biome lint --write .",
     "format": "biome format --write .",
     "type-check": "tsc --noEmit",
     "prepare": "husky",
     "pub:latest": "changeset publish",
-    "build:prepare": "pnpm run type-check && pnpm run lint && pnpm run format && pnpm run build",
-    "dev:prepare": "git pull origin main && pnpm i"
+    "build:prepare": "bun run type-check && bun run lint && bun run format && bun run build",
+    "dev:prepare": "git pull origin main && bun i"
   },
   "devDependencies": {
     "@biomejs/biome": "^1.8.3",
@@ -30,6 +30,5 @@
     "rimraf": "^6.0.1",
     "tsup": "^8.2.3",
     "typescript": "^5.5.4"
-  },
-  "packageManager": "pnpm@9.6.0"
+  }
 }
