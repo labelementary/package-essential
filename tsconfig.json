@@ -16,10 +16,6 @@
     "noUnusedParameters": false,
     "noPropertyAccessFromIndexSignature": false,
     "checkJs": false,
-    "allowSyntheticDefaultImports": true,
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    }
+    "allowSyntheticDefaultImports": true
   }
 }

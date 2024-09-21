@@ -2,7 +2,7 @@
   "name": "package-essential",
   "private": "false",
   "version": "0.0.0",
-  "description": "Package Essential - An Essential Starter Template for Development of TypeScript Based Packages.",
+  "description": "Unified Package Essential - An Essential Starter Template for Development of TypeScript Based Packages.",
   "main": "./src/index.ts",
   "module": "./src/index.ts",
   "files": ["dist", "README.md", "package.json"],
@@ -11,24 +11,24 @@
   },
   "type": "module",
   "scripts": {
-    "build": "bun rimraf dist && tsup",
-    "dev": "bun run src/index.ts",
+    "build": "pnpm rimraf dist && tsup",
+    "dev": "pnpm run build && node dist/index.js",
     "lint": "biome lint --write .",
     "format": "biome format --write .",
-    "type-check": "tsc --noEmit",
+    "typecheck": "tsc --noEmit",
     "prepare": "husky",
     "pub:latest": "changeset publish",
-    "build:prepare": "bun run type-check && bun run lint && bun run format && bun run build",
-    "dev:prepare": "git pull origin main && bun i"
+    "build:prepare": "pnpm run typecheck && pnpm run lint && pnpm run format && pnpm run build",
+    "dev:prepare": "git pull origin main && pnpm i"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.8.3",
+    "@biomejs/biome": "^1.9.2",
     "@changesets/changelog-github": "^0.5.0",
-    "@changesets/cli": "^2.27.7",
-    "@types/node": "^22.0.0",
-    "husky": "^9.1.4",
+    "@changesets/cli": "^2.27.8",
+    "@types/node": "^22.5.5",
+    "husky": "^9.1.6",
     "rimraf": "^6.0.1",
-    "tsup": "^8.2.3",
-    "typescript": "^5.5.4"
+    "tsup": "^8.3.0",
+    "typescript": "^5.6.2"
   }
 }
