@@ -1,6 +1,6 @@
-# Unified Package Essential
+# Package Essential
 
-Unified Package Essential - An Essential Template to get started with TypeScript based package with all the essentials included...
+Package Essential - An Essential Template to get started with TypeScript based package with all the essentials included...
 
 ## Features
 
