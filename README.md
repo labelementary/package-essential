@@ -6,6 +6,7 @@ Package Essential - An Essential Template to get started with TypeScript based p
 
 - 💻 Language: [TypeScript](https://www.typescriptlang.org/) - Typed superset of JavaScript
 - 📦 Tsup: [Tsup](https://github.com/egoist/tsup) - The next generation frontend build tool
+- 📦 Vitest: [Vitest](https://vitest.dev/) - A blazing fast unit testing and mocking solution
 - 🧹 Linting and Formatting: [Biome.js](https://biomejs.dev/) - Fast and customizable linter and formatter
 - ⚙️ Build: Github Actions - Automated workflows for CI/CD
 - 🛠 Commit: [Husky](https://typicode.github.io/husky/) - Git hooks made easy

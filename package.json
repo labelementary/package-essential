@@ -2,10 +2,14 @@
   "name": "package-essential",
   "private": "false",
   "version": "0.0.0",
-  "description": "Unified Package Essential - An Essential Starter Template for Development of TypeScript Based Packages.",
+  "description": "Package Essential - An Essential Starter Template for Development of TypeScript Based Packages.",
   "main": "./src/index.ts",
   "module": "./src/index.ts",
-  "files": ["dist", "README.md", "package.json"],
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
   "bin": {
     "package-essential": "./dist/index.js"
   },
@@ -17,20 +21,22 @@
     "format": "biome format --write .",
     "check": "biome check --write .",
     "typecheck": "tsc --noEmit",
-    "prepare": "husky",
     "pub:latest": "changeset publish",
     "build:prepare": "pnpm run typecheck && pnpm run lint && pnpm run format && pnpm run check && pnpm run build",
     "dev:prepare": "git pull origin main && pnpm i"
   },
   "devDependencies": {
-    "@biomejs/biome": "^1.9.4",
+    "@biomejs/biome": "^2.1.2",
     "@changesets/changelog-github": "^0.5.1",
-    "@changesets/cli": "^2.29.2",
-    "@types/node": "^22.15.3",
+    "@changesets/cli": "^2.29.5",
+    "@types/node": "^24.0.15",
     "husky": "^9.1.7",
     "rimraf": "^6.0.1",
-    "tsup": "^8.4.0",
+    "tsup": "^8.5.0",
     "typescript": "^5.8.3"
   },
-  "packageManager": "pnpm@10.10.0"
+  "packageManager": "pnpm@10.13.1",
+  "dependencies": {
+    "vitest": "^3.2.4"
+  }
 }

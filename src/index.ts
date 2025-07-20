@@ -1,1 +1,1 @@
-console.log("Hello via Package Essential!");
+export const squared = (n: number): number => n * n;
